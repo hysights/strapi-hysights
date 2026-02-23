@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "presses",
+  "info": {
+    "singularName": "press",
+    "pluralName": "presses",
+    "displayName": "Press"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "news": {
+      "type": "component",
+      "component": "shared.market-insight-box",
+      "repeatable": true
+    },
+    "confident_decision": {
+      "type": "component",
+      "component": "shared.confident-decision",
+      "repeatable": false
+    }
+  }
+}
