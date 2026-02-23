@@ -23,10 +23,7 @@ export interface SharedHomeHero extends Struct.ComponentSchema {
     button_link: Schema.Attribute.String;
     button_text: Schema.Attribute.String;
     description: Schema.Attribute.String;
-    leftImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    leftImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }

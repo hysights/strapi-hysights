@@ -20,7 +20,7 @@
     },
     "leftImage": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "allowedTypes": [
         "images",
         "files",
