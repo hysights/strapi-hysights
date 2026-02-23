@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_who_we_serves",
+  "info": {
+    "displayName": "Who we serve"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "big_boxes": {
+      "type": "component",
+      "component": "shared.three-boxes",
+      "repeatable": true
+    },
+    "small_boxes": {
+      "type": "component",
+      "component": "shared.three-boxes",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

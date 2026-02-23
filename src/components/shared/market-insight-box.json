@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_market_insight_boxes",
+  "info": {
+    "displayName": "Market Insight Box"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "link": {
+      "type": "string"
+    },
+    "image_if_any": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

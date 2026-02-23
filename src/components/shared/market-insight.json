@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_market_insights",
+  "info": {
+    "displayName": "Market Insight"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "insights": {
+      "type": "component",
+      "component": "shared.market-insight-box",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

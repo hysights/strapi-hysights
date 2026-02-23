@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "shared.home-hero",
+      "repeatable": false
+    },
+    "how_we_help": {
+      "type": "component",
+      "component": "shared.section-title-and-heading",
+      "repeatable": false
+    },
+    "who_we_serve": {
+      "type": "component",
+      "component": "shared.who-we-serve",
+      "repeatable": false
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "shared.testimonial",
+      "repeatable": true
+    },
+    "market_insight": {
+      "type": "component",
+      "component": "shared.market-insight",
+      "repeatable": false
+    },
+    "expert": {
+      "type": "component",
+      "component": "shared.expert-section",
+      "repeatable": false
+    }
+  }
+}

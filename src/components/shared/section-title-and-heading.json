@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_section_title_and_headings",
+  "info": {
+    "displayName": "Who we are"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "slider": {
+      "type": "component",
+      "component": "shared.home-slider",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
