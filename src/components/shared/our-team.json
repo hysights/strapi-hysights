@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_our_teams",
+  "info": {
+    "displayName": "Our Team"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "teams": {
+      "type": "component",
+      "component": "shared.teams",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

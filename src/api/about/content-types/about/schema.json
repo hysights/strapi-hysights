@@ -15,9 +15,39 @@
     "title": {
       "type": "string"
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    "description": {
+      "type": "string"
+    },
+    "button_text": {
+      "type": "string"
+    },
+    "button_url": {
+      "type": "string"
+    },
+    "our_story": {
+      "type": "component",
+      "component": "shared.our-story",
+      "repeatable": false
+    },
+    "our_team": {
+      "type": "component",
+      "component": "shared.our-team",
+      "repeatable": false
+    },
+    "confident_decision": {
+      "type": "component",
+      "component": "shared.confident-decision",
+      "repeatable": false
+    },
+    "market_insight": {
+      "type": "component",
+      "component": "shared.market-insight",
+      "repeatable": true
+    },
+    "expert": {
+      "type": "component",
+      "component": "shared.expert-section",
+      "repeatable": true
     }
   }
 }

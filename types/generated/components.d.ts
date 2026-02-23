@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedConfidentDecision extends Struct.ComponentSchema {
+  collectionName: 'components_shared_confident_decisions';
+  info: {
+    displayName: 'Confident Decision';
+  };
+  attributes: {
+    boxes: Schema.Attribute.Component<'shared.three-boxes', true>;
+    heading: Schema.Attribute.String;
+    highlighted_text: Schema.Attribute.String;
+  };
+}
+
 export interface SharedExpertSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_expert_sections';
   info: {
@@ -75,8 +87,30 @@ export interface SharedMedia extends Struct.ComponentSchema {
     displayName: 'Media';
     icon: 'file-video';
   };
+  attributes: {};
+}
+
+export interface SharedOurStory extends Struct.ComponentSchema {
+  collectionName: 'components_shared_our_stories';
+  info: {
+    displayName: 'Our Story';
+  };
   attributes: {
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    first_paragraph: Schema.Attribute.Text;
+    highlighted_text: Schema.Attribute.String;
+    second_paragraph: Schema.Attribute.String;
+  };
+}
+
+export interface SharedOurTeam extends Struct.ComponentSchema {
+  collectionName: 'components_shared_our_teams';
+  info: {
+    displayName: 'Our Team';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    highlighted_text: Schema.Attribute.String;
+    teams: Schema.Attribute.Component<'shared.teams', true>;
   };
 }
 
@@ -143,6 +177,19 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTeams extends Struct.ComponentSchema {
+  collectionName: 'components_shared_teams';
+  info: {
+    displayName: 'Teams';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    designation: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String;
+  };
+}
+
 export interface SharedTestimonial extends Struct.ComponentSchema {
   collectionName: 'components_shared_testimonials';
   info: {
@@ -189,17 +236,21 @@ export interface SharedWhoWeServe extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.confident-decision': SharedConfidentDecision;
       'shared.expert-section': SharedExpertSection;
       'shared.home-hero': SharedHomeHero;
       'shared.home-slider': SharedHomeSlider;
       'shared.market-insight': SharedMarketInsight;
       'shared.market-insight-box': SharedMarketInsightBox;
       'shared.media': SharedMedia;
+      'shared.our-story': SharedOurStory;
+      'shared.our-team': SharedOurTeam;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.section-title-and-heading': SharedSectionTitleAndHeading;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.teams': SharedTeams;
       'shared.testimonial': SharedTestimonial;
       'shared.three-boxes': SharedThreeBoxes;
       'shared.who-we-serve': SharedWhoWeServe;

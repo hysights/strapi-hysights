@@ -442,15 +442,23 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    blocks: Schema.Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
+    button_text: Schema.Attribute.String;
+    button_url: Schema.Attribute.String;
+    confident_decision: Schema.Attribute.Component<
+      'shared.confident-decision',
+      false
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    expert: Schema.Attribute.Component<'shared.expert-section', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
       Schema.Attribute.Private;
+    market_insight: Schema.Attribute.Component<'shared.market-insight', true>;
+    our_story: Schema.Attribute.Component<'shared.our-story', false>;
+    our_team: Schema.Attribute.Component<'shared.our-team', false>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

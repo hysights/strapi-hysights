@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_confident_decisions",
+  "info": {
+    "displayName": "Confident Decision"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "boxes": {
+      "type": "component",
+      "component": "shared.three-boxes",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

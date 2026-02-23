@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_our_stories",
+  "info": {
+    "displayName": "Our Story"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "first_paragraph": {
+      "type": "text"
+    },
+    "second_paragraph": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
