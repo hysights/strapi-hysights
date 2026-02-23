@@ -183,8 +183,8 @@ export interface SharedTeams extends Struct.ComponentSchema {
     displayName: 'Teams';
   };
   attributes: {
-    description: Schema.Attribute.String;
-    designation: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
+    designation: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     name: Schema.Attribute.String;
   };
