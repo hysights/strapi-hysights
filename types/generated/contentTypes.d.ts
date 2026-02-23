@@ -452,11 +452,11 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.String;
-    expert: Schema.Attribute.Component<'shared.expert-section', true>;
+    expert: Schema.Attribute.Component<'shared.expert-section', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
       Schema.Attribute.Private;
-    market_insight: Schema.Attribute.Component<'shared.market-insight', true>;
+    market_insight: Schema.Attribute.Component<'shared.market-insight', false>;
     our_story: Schema.Attribute.Component<'shared.our-story', false>;
     our_team: Schema.Attribute.Component<'shared.our-team', false>;
     publishedAt: Schema.Attribute.DateTime;

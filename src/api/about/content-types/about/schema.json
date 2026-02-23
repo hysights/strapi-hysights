@@ -42,12 +42,12 @@
     "market_insight": {
       "type": "component",
       "component": "shared.market-insight",
-      "repeatable": true
+      "repeatable": false
     },
     "expert": {
       "type": "component",
       "component": "shared.expert-section",
-      "repeatable": true
+      "repeatable": false
     }
   }
 }
