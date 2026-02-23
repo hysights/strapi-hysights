@@ -98,7 +98,7 @@ export interface SharedOurStory extends Struct.ComponentSchema {
   attributes: {
     first_paragraph: Schema.Attribute.Text;
     highlighted_text: Schema.Attribute.String;
-    second_paragraph: Schema.Attribute.String;
+    second_paragraph: Schema.Attribute.Text;
   };
 }
 
@@ -184,7 +184,7 @@ export interface SharedTeams extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.String;
-    designation: Schema.Attribute.String;
+    designation: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     name: Schema.Attribute.String;
   };

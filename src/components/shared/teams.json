@@ -9,7 +9,7 @@
       "type": "string"
     },
     "designation": {
-      "type": "string"
+      "type": "text"
     },
     "description": {
       "type": "string"

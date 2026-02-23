@@ -12,7 +12,7 @@
       "type": "text"
     },
     "second_paragraph": {
-      "type": "string"
+      "type": "text"
     }
   },
   "config": {}
