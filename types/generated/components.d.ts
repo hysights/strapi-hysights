@@ -139,6 +139,18 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedRatingProcess extends Struct.ComponentSchema {
+  collectionName: 'components_shared_rating_processes';
+  info: {
+    displayName: 'Rating Process';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    highlighted_text: Schema.Attribute.String;
+    steps: Schema.Attribute.Component<'shared.quote', true>;
+  };
+}
+
 export interface SharedRichText extends Struct.ComponentSchema {
   collectionName: 'components_shared_rich_texts';
   info: {
@@ -298,6 +310,7 @@ declare module '@strapi/strapi' {
       'shared.our-story': SharedOurStory;
       'shared.our-team': SharedOurTeam;
       'shared.quote': SharedQuote;
+      'shared.rating-process': SharedRatingProcess;
       'shared.rich-text': SharedRichText;
       'shared.section-title-and-heading': SharedSectionTitleAndHeading;
       'shared.seo': SharedSeo;

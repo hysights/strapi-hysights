@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_rating_processes",
+  "info": {
+    "displayName": "Rating Process"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "component",
+      "component": "shared.quote",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
