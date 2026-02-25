@@ -26,19 +26,9 @@
       "component": "shared.why-ratings",
       "repeatable": false
     },
-    "rating_process": {
-      "type": "component",
-      "component": "shared.rating-process",
-      "repeatable": false
-    },
     "who_we_serve": {
       "type": "component",
       "component": "shared.who-we-serve",
-      "repeatable": false
-    },
-    "expert": {
-      "type": "component",
-      "component": "shared.expert-section",
       "repeatable": false
     }
   }
