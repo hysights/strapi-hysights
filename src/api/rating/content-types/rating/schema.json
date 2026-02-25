@@ -30,6 +30,11 @@
       "type": "component",
       "component": "shared.who-we-serve",
       "repeatable": false
+    },
+    "rating_process": {
+      "type": "component",
+      "component": "shared.rating-process",
+      "repeatable": false
     }
   }
 }
