@@ -224,7 +224,9 @@ export interface SharedTextOnly extends Struct.ComponentSchema {
   info: {
     displayName: 'Text only';
   };
-  attributes: {};
+  attributes: {
+    text: Schema.Attribute.String;
+  };
 }
 
 export interface SharedThreeBoxes extends Struct.ComponentSchema {
@@ -261,7 +263,7 @@ export interface SharedWhyProjectRatings extends Struct.ComponentSchema {
   };
   attributes: {
     caption: Schema.Attribute.Text;
-    caption1: Schema.Attribute.String;
+    caption1: Schema.Attribute.Text;
     feature_box: Schema.Attribute.Component<'shared.feature-box', true>;
     heading: Schema.Attribute.String;
     highlighted_text: Schema.Attribute.String;

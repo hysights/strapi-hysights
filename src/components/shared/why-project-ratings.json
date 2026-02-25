@@ -15,7 +15,7 @@
       "type": "text"
     },
     "caption1": {
-      "type": "string"
+      "type": "text"
     },
     "image": {
       "type": "media",

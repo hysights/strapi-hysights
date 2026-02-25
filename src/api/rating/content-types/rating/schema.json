@@ -30,6 +30,11 @@
       "type": "component",
       "component": "shared.who-we-serve",
       "repeatable": false
+    },
+    "expert": {
+      "type": "component",
+      "component": "shared.expert-section",
+      "repeatable": false
     }
   }
 }

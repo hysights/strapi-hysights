@@ -4,6 +4,10 @@
     "displayName": "Text only"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
   "config": {}
 }
