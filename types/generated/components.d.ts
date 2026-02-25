@@ -66,6 +66,32 @@ export interface SharedHomeSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHowHysightsHelpsOfftakers
+  extends Struct.ComponentSchema {
+  collectionName: 'components_shared_how_hysights_helps_offtakers_s';
+  info: {
+    displayName: 'How hysights helps offtakers ';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    highlighted_text: Schema.Attribute.String;
+    tiles: Schema.Attribute.Component<'shared.image-box-with-title', true>;
+  };
+}
+
+export interface SharedImageBoxWithTitle extends Struct.ComponentSchema {
+  collectionName: 'components_shared_image_box_with_titles';
+  info: {
+    displayName: 'Image Box with Title';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMarketInsight extends Struct.ComponentSchema {
   collectionName: 'components_shared_market_insights';
   info: {
@@ -340,6 +366,8 @@ declare module '@strapi/strapi' {
       'shared.feature-box': SharedFeatureBox;
       'shared.home-hero': SharedHomeHero;
       'shared.home-slider': SharedHomeSlider;
+      'shared.how-hysights-helps-offtakers': SharedHowHysightsHelpsOfftakers;
+      'shared.image-box-with-title': SharedImageBoxWithTitle;
       'shared.market-insight': SharedMarketInsight;
       'shared.market-insight-box': SharedMarketInsightBox;
       'shared.media': SharedMedia;

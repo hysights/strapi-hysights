@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_how_hysights_helps_offtakers_s",
+  "info": {
+    "displayName": "How hysights helps offtakers "
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "tiles": {
+      "type": "component",
+      "component": "shared.image-box-with-title",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

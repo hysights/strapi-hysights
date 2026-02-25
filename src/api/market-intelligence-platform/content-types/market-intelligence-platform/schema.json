@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "market_intelligence_platforms",
+  "info": {
+    "singularName": "market-intelligence-platform",
+    "pluralName": "market-intelligence-platforms",
+    "displayName": "Market Intelligence Platform"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "shared.home-hero",
+      "repeatable": false
+    },
+    "how_hysights_helps": {
+      "type": "component",
+      "component": "shared.how-hysights-helps-offtakers",
+      "repeatable": false
+    },
+    "why_market_intelligence": {
+      "type": "component",
+      "component": "shared.confident-decision",
+      "repeatable": false
+    },
+    "expert": {
+      "type": "component",
+      "component": "shared.expert-section",
+      "repeatable": false
+    }
+  }
+}

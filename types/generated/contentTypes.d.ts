@@ -674,6 +674,44 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiMarketIntelligencePlatformMarketIntelligencePlatform
+  extends Struct.SingleTypeSchema {
+  collectionName: 'market_intelligence_platforms';
+  info: {
+    displayName: 'Market Intelligence Platform';
+    pluralName: 'market-intelligence-platforms';
+    singularName: 'market-intelligence-platform';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'shared.home-hero', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    expert: Schema.Attribute.Component<'shared.expert-section', false>;
+    how_hysights_helps: Schema.Attribute.Component<
+      'shared.how-hysights-helps-offtakers',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::market-intelligence-platform.market-intelligence-platform'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_market_intelligence: Schema.Attribute.Component<
+      'shared.confident-decision',
+      false
+    >;
+  };
+}
+
 export interface ApiPressPress extends Struct.SingleTypeSchema {
   collectionName: 'presses';
   info: {
@@ -1262,6 +1300,7 @@ declare module '@strapi/strapi' {
       'api::deal-flow-intelligence.deal-flow-intelligence': ApiDealFlowIntelligenceDealFlowIntelligence;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::market-intelligence-platform.market-intelligence-platform': ApiMarketIntelligencePlatformMarketIntelligencePlatform;
       'api::press.press': ApiPressPress;
       'api::rating.rating': ApiRatingRating;
       'plugin::content-releases.release': PluginContentReleasesRelease;
