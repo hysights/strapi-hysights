@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "ratings",
+  "info": {
+    "singularName": "rating",
+    "pluralName": "ratings",
+    "displayName": "Rating"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "shared.home-hero",
+      "repeatable": false
+    },
+    "why_project_rarings": {
+      "type": "component",
+      "component": "shared.why-project-ratings",
+      "repeatable": false
+    },
+    "why_hysights_ratings": {
+      "type": "component",
+      "component": "shared.why-ratings",
+      "repeatable": false
+    },
+    "who_we_serve": {
+      "type": "component",
+      "component": "shared.who-we-serve",
+      "repeatable": false
+    }
+  }
+}

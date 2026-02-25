@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_why_ratings",
+  "info": {
+    "displayName": "Why Ratings"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "left_boxes": {
+      "type": "component",
+      "component": "shared.quote",
+      "repeatable": true
+    },
+    "right_section": {
+      "type": "component",
+      "component": "shared.home-slider",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

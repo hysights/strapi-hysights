@@ -1,21 +1,20 @@
 {
-  "collectionName": "components_shared_home_heroes",
+  "collectionName": "components_shared_why_project_ratings",
   "info": {
-    "displayName": "Home Hero",
-    "icon": "heart"
+    "displayName": "Why Project Ratings"
   },
   "options": {},
   "attributes": {
-    "title": {
+    "highlighted_text": {
       "type": "string"
     },
-    "description": {
+    "heading": {
       "type": "string"
     },
-    "button_text": {
-      "type": "string"
+    "caption": {
+      "type": "text"
     },
-    "button_link": {
+    "caption1": {
       "type": "string"
     },
     "image": {
@@ -27,6 +26,11 @@
         "videos",
         "audios"
       ]
+    },
+    "feature_box": {
+      "type": "component",
+      "component": "shared.feature-box",
+      "repeatable": true
     }
   },
   "config": {}

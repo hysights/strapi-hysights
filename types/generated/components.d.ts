@@ -25,6 +25,19 @@ export interface SharedExpertSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFeatureBox extends Struct.ComponentSchema {
+  collectionName: 'components_shared_feature_boxes';
+  info: {
+    displayName: 'Feature Box';
+  };
+  attributes: {
+    caption: Schema.Attribute.String;
+    caption1: Schema.Attribute.String;
+    features: Schema.Attribute.Component<'shared.text-only', true>;
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface SharedHomeHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_home_heroes';
   info: {
@@ -35,7 +48,7 @@ export interface SharedHomeHero extends Struct.ComponentSchema {
     button_link: Schema.Attribute.String;
     button_text: Schema.Attribute.String;
     description: Schema.Attribute.String;
-    leftImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
@@ -206,6 +219,14 @@ export interface SharedTestimonial extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTextOnly extends Struct.ComponentSchema {
+  collectionName: 'components_shared_text_onlies';
+  info: {
+    displayName: 'Text only';
+  };
+  attributes: {};
+}
+
 export interface SharedThreeBoxes extends Struct.ComponentSchema {
   collectionName: 'components_shared_three_boxes';
   info: {
@@ -233,11 +254,40 @@ export interface SharedWhoWeServe extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedWhyProjectRatings extends Struct.ComponentSchema {
+  collectionName: 'components_shared_why_project_ratings';
+  info: {
+    displayName: 'Why Project Ratings';
+  };
+  attributes: {
+    caption: Schema.Attribute.Text;
+    caption1: Schema.Attribute.String;
+    feature_box: Schema.Attribute.Component<'shared.feature-box', true>;
+    heading: Schema.Attribute.String;
+    highlighted_text: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface SharedWhyRatings extends Struct.ComponentSchema {
+  collectionName: 'components_shared_why_ratings';
+  info: {
+    displayName: 'Why Ratings';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    highlighted_text: Schema.Attribute.String;
+    left_boxes: Schema.Attribute.Component<'shared.quote', true>;
+    right_section: Schema.Attribute.Component<'shared.home-slider', false>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.confident-decision': SharedConfidentDecision;
       'shared.expert-section': SharedExpertSection;
+      'shared.feature-box': SharedFeatureBox;
       'shared.home-hero': SharedHomeHero;
       'shared.home-slider': SharedHomeSlider;
       'shared.market-insight': SharedMarketInsight;
@@ -252,8 +302,11 @@ declare module '@strapi/strapi' {
       'shared.slider': SharedSlider;
       'shared.teams': SharedTeams;
       'shared.testimonial': SharedTestimonial;
+      'shared.text-only': SharedTextOnly;
       'shared.three-boxes': SharedThreeBoxes;
       'shared.who-we-serve': SharedWhoWeServe;
+      'shared.why-project-ratings': SharedWhyProjectRatings;
+      'shared.why-ratings': SharedWhyRatings;
     }
   }
 }

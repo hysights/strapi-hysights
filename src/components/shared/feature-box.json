@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_feature_boxes",
+  "info": {
+    "displayName": "Feature Box"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "caption1": {
+      "type": "string"
+    },
+    "features": {
+      "type": "component",
+      "component": "shared.text-only",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
