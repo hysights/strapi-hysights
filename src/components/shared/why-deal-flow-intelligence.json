@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_why_deal_flow_intelligences",
+  "info": {
+    "displayName": "Why deal flow intelligence"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "tab": {
+      "type": "component",
+      "component": "shared.tabs",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

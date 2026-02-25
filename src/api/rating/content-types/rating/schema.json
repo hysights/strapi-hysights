@@ -35,6 +35,11 @@
       "type": "component",
       "component": "shared.rating-process",
       "repeatable": false
+    },
+    "expert": {
+      "type": "component",
+      "component": "shared.expert-section",
+      "repeatable": false
     }
   }
 }

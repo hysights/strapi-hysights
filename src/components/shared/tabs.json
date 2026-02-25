@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_tabs",
+  "info": {
+    "displayName": "Tabs"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "text": {
+      "type": "component",
+      "component": "shared.title-description-image",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -571,6 +571,44 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDealFlowIntelligenceDealFlowIntelligence
+  extends Struct.SingleTypeSchema {
+  collectionName: 'deal_flow_intelligences';
+  info: {
+    displayName: 'Deal Flow Intelligence';
+    pluralName: 'deal-flow-intelligences';
+    singularName: 'deal-flow-intelligence';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'shared.home-hero', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    expert: Schema.Attribute.Component<'shared.expert-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::deal-flow-intelligence.deal-flow-intelligence'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    unique_value_proposition: Schema.Attribute.Component<
+      'shared.confident-decision',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_deal_flow: Schema.Attribute.Component<
+      'shared.why-deal-flow-intelligence',
+      false
+    >;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -683,6 +721,7 @@ export interface ApiRatingRating extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    expert: Schema.Attribute.Component<'shared.expert-section', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1220,6 +1259,7 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
+      'api::deal-flow-intelligence.deal-flow-intelligence': ApiDealFlowIntelligenceDealFlowIntelligence;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::press.press': ApiPressPress;

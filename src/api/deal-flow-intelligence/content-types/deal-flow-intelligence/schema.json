@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "deal_flow_intelligences",
+  "info": {
+    "singularName": "deal-flow-intelligence",
+    "pluralName": "deal-flow-intelligences",
+    "displayName": "Deal Flow Intelligence"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "shared.home-hero",
+      "repeatable": false
+    },
+    "why_deal_flow": {
+      "type": "component",
+      "component": "shared.why-deal-flow-intelligence",
+      "repeatable": false
+    },
+    "unique_value_proposition": {
+      "type": "component",
+      "component": "shared.confident-decision",
+      "repeatable": false
+    },
+    "expert": {
+      "type": "component",
+      "component": "shared.expert-section",
+      "repeatable": false
+    }
+  }
+}

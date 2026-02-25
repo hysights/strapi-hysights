@@ -202,6 +202,18 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTabs extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tabs';
+  info: {
+    displayName: 'Tabs';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.Component<'shared.title-description-image', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedTeams extends Struct.ComponentSchema {
   collectionName: 'components_shared_teams';
   info: {
@@ -255,6 +267,18 @@ export interface SharedThreeBoxes extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTitleDescriptionImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_title_description_images';
+  info: {
+    displayName: 'Title description image';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedWhoWeServe extends Struct.ComponentSchema {
   collectionName: 'components_shared_who_we_serves';
   info: {
@@ -265,6 +289,18 @@ export interface SharedWhoWeServe extends Struct.ComponentSchema {
     heading: Schema.Attribute.String;
     highlighted_text: Schema.Attribute.String;
     small_boxes: Schema.Attribute.Component<'shared.three-boxes', true>;
+  };
+}
+
+export interface SharedWhyDealFlowIntelligence extends Struct.ComponentSchema {
+  collectionName: 'components_shared_why_deal_flow_intelligences';
+  info: {
+    displayName: 'Why deal flow intelligence';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    highlighted_text: Schema.Attribute.String;
+    tab: Schema.Attribute.Component<'shared.tabs', true>;
   };
 }
 
@@ -315,11 +351,14 @@ declare module '@strapi/strapi' {
       'shared.section-title-and-heading': SharedSectionTitleAndHeading;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.tabs': SharedTabs;
       'shared.teams': SharedTeams;
       'shared.testimonial': SharedTestimonial;
       'shared.text-only': SharedTextOnly;
       'shared.three-boxes': SharedThreeBoxes;
+      'shared.title-description-image': SharedTitleDescriptionImage;
       'shared.who-we-serve': SharedWhoWeServe;
+      'shared.why-deal-flow-intelligence': SharedWhyDealFlowIntelligence;
       'shared.why-project-ratings': SharedWhyProjectRatings;
       'shared.why-ratings': SharedWhyRatings;
     }
