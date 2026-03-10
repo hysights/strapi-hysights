@@ -189,6 +189,20 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedRolesBanner extends Struct.ComponentSchema {
+  collectionName: 'components_shared_roles_banners';
+  info: {
+    displayName: 'Roles Banner';
+  };
+  attributes: {
+    button_link: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    highlighted_text: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSectionTitleAndHeading extends Struct.ComponentSchema {
   collectionName: 'components_shared_section_title_and_headings';
   info: {
@@ -376,6 +390,7 @@ declare module '@strapi/strapi' {
       'shared.quote': SharedQuote;
       'shared.rating-process': SharedRatingProcess;
       'shared.rich-text': SharedRichText;
+      'shared.roles-banner': SharedRolesBanner;
       'shared.section-title-and-heading': SharedSectionTitleAndHeading;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_roles_banners",
+  "info": {
+    "displayName": "Roles Banner"
+  },
+  "options": {},
+  "attributes": {
+    "highlighted_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button_text": {
+      "type": "string"
+    },
+    "button_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

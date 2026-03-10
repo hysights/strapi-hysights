@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "for_offtakers",
+  "info": {
+    "singularName": "for-offtaker",
+    "pluralName": "for-offtakers",
+    "displayName": "For Offtaker"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "shared.roles-banner",
+      "repeatable": false
+    },
+    "how_hysights_helps": {
+      "type": "component",
+      "component": "shared.how-hysights-helps-offtakers",
+      "repeatable": false
+    },
+    "why_market_intelligence": {
+      "type": "component",
+      "component": "shared.confident-decision",
+      "repeatable": false
+    },
+    "market_insight": {
+      "type": "component",
+      "component": "shared.market-insight",
+      "repeatable": false
+    },
+    "expert": {
+      "type": "component",
+      "component": "shared.expert-section",
+      "repeatable": false
+    }
+  }
+}

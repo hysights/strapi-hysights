@@ -609,6 +609,121 @@ export interface ApiDealFlowIntelligenceDealFlowIntelligence
   };
 }
 
+export interface ApiForInvestorForInvestor extends Struct.SingleTypeSchema {
+  collectionName: 'for_investors';
+  info: {
+    displayName: 'For Investor';
+    pluralName: 'for-investors';
+    singularName: 'for-investor';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'shared.roles-banner', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    expert: Schema.Attribute.Component<'shared.expert-section', true>;
+    how_hysights_helps: Schema.Attribute.Component<
+      'shared.how-hysights-helps-offtakers',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::for-investor.for-investor'
+    > &
+      Schema.Attribute.Private;
+    market_insight: Schema.Attribute.Component<'shared.market-insight', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_market_intelligence: Schema.Attribute.Component<
+      'shared.confident-decision',
+      false
+    >;
+  };
+}
+
+export interface ApiForOfftakerForOfftaker extends Struct.SingleTypeSchema {
+  collectionName: 'for_offtakers';
+  info: {
+    displayName: 'For Offtaker';
+    pluralName: 'for-offtakers';
+    singularName: 'for-offtaker';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'shared.roles-banner', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    expert: Schema.Attribute.Component<'shared.expert-section', false>;
+    how_hysights_helps: Schema.Attribute.Component<
+      'shared.how-hysights-helps-offtakers',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::for-offtaker.for-offtaker'
+    > &
+      Schema.Attribute.Private;
+    market_insight: Schema.Attribute.Component<'shared.market-insight', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_market_intelligence: Schema.Attribute.Component<
+      'shared.confident-decision',
+      false
+    >;
+  };
+}
+
+export interface ApiForProjectDeveloperForProjectDeveloper
+  extends Struct.SingleTypeSchema {
+  collectionName: 'for_project_developers';
+  info: {
+    displayName: 'For Project Developer';
+    pluralName: 'for-project-developers';
+    singularName: 'for-project-developer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'shared.roles-banner', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    expert: Schema.Attribute.Component<'shared.expert-section', false>;
+    how_hysights_helps: Schema.Attribute.Component<
+      'shared.how-hysights-helps-offtakers',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::for-project-developer.for-project-developer'
+    > &
+      Schema.Attribute.Private;
+    market_insight: Schema.Attribute.Component<'shared.market-insight', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_market_intelligence: Schema.Attribute.Component<
+      'shared.confident-decision',
+      false
+    >;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1298,6 +1413,9 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::deal-flow-intelligence.deal-flow-intelligence': ApiDealFlowIntelligenceDealFlowIntelligence;
+      'api::for-investor.for-investor': ApiForInvestorForInvestor;
+      'api::for-offtaker.for-offtaker': ApiForOfftakerForOfftaker;
+      'api::for-project-developer.for-project-developer': ApiForProjectDeveloperForProjectDeveloper;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::market-intelligence-platform.market-intelligence-platform': ApiMarketIntelligencePlatformMarketIntelligencePlatform;
