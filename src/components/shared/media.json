@@ -5,5 +5,16 @@
     "icon": "file-video"
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
 }
