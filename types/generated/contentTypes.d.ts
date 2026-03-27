@@ -785,6 +785,42 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHomeTestHomeTest extends Struct.SingleTypeSchema {
+  collectionName: 'home_tests';
+  info: {
+    displayName: 'Home Test';
+    pluralName: 'home-tests';
+    singularName: 'home-test';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'shared.home-hero', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    expert: Schema.Attribute.Component<'shared.expert-section', false>;
+    how_we_help: Schema.Attribute.Component<
+      'shared.section-title-and-heading',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-test.home-test'
+    > &
+      Schema.Attribute.Private;
+    market_insight: Schema.Attribute.Component<'shared.market-insight', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    testimonials: Schema.Attribute.Component<'shared.testimonial', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    who_we_serve: Schema.Attribute.Component<'shared.who-we-serve', false>;
+  };
+}
+
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
@@ -1504,6 +1540,7 @@ declare module '@strapi/strapi' {
       'api::for-offtaker.for-offtaker': ApiForOfftakerForOfftaker;
       'api::for-project-developer.for-project-developer': ApiForProjectDeveloperForProjectDeveloper;
       'api::global.global': ApiGlobalGlobal;
+      'api::home-test.home-test': ApiHomeTestHomeTest;
       'api::home.home': ApiHomeHome;
       'api::market-intelligence-platform.market-intelligence-platform': ApiMarketIntelligencePlatformMarketIntelligencePlatform;
       'api::press.press': ApiPressPress;
