@@ -753,6 +753,42 @@ export interface ApiForProjectDeveloperForProjectDeveloper
   };
 }
 
+export interface ApiFormDataFormData extends Struct.CollectionTypeSchema {
+  collectionName: 'forms_data';
+  info: {
+    displayName: 'Form Data';
+    pluralName: 'forms-data';
+    singularName: 'form-data';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    company_name: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    family_name: Schema.Attribute.String;
+    first_name: Schema.Attribute.String;
+    form_name: Schema.Attribute.String;
+    interest: Schema.Attribute.String;
+    job_title: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::form-data.form-data'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -988,6 +1024,34 @@ export interface ApiRatingRating extends Struct.SingleTypeSchema {
       'shared.why-project-ratings',
       false
     >;
+  };
+}
+
+export interface ApiSubscriberSubscriber extends Struct.CollectionTypeSchema {
+  collectionName: 'subscribers';
+  info: {
+    displayName: 'Subscriber';
+    pluralName: 'subscribers';
+    singularName: 'subscriber';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::subscriber.subscriber'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1539,6 +1603,7 @@ declare module '@strapi/strapi' {
       'api::for-investor.for-investor': ApiForInvestorForInvestor;
       'api::for-offtaker.for-offtaker': ApiForOfftakerForOfftaker;
       'api::for-project-developer.for-project-developer': ApiForProjectDeveloperForProjectDeveloper;
+      'api::form-data.form-data': ApiFormDataFormData;
       'api::global.global': ApiGlobalGlobal;
       'api::home-test.home-test': ApiHomeTestHomeTest;
       'api::home.home': ApiHomeHome;
@@ -1546,6 +1611,7 @@ declare module '@strapi/strapi' {
       'api::press.press': ApiPressPress;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::rating.rating': ApiRatingRating;
+      'api::subscriber.subscriber': ApiSubscriberSubscriber;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
