@@ -48,6 +48,16 @@
     "display_date": {
       "type": "date"
     },
+    "hero_cover_image_if_needed": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "blocks": {
       "type": "dynamiczone",
       "components": [
