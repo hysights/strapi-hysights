@@ -490,7 +490,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.Text &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
+        maxLength: 300;
       }>;
     display_date: Schema.Attribute.Date;
     hero_cover_image_if_needed: Schema.Attribute.Media<
