@@ -457,6 +457,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
       Schema.Attribute.Private;
     market_insight: Schema.Attribute.Component<'shared.market-insight', false>;
+    meta_data: Schema.Attribute.Component<'shared.seo', false>;
     our_story: Schema.Attribute.Component<'shared.our-story', false>;
     our_team: Schema.Attribute.Component<'shared.our-team', false>;
     publishedAt: Schema.Attribute.DateTime;
@@ -502,6 +503,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       'api::article.article'
     > &
       Schema.Attribute.Private;
+    meta_data: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
@@ -626,6 +628,7 @@ export interface ApiDealFlowIntelligenceDealFlowIntelligence
       'api::deal-flow-intelligence.deal-flow-intelligence'
     > &
       Schema.Attribute.Private;
+    meta_data: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     unique_value_proposition: Schema.Attribute.Component<
       'shared.confident-decision',
@@ -668,6 +671,7 @@ export interface ApiForInvestorForInvestor extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     market_insight: Schema.Attribute.Component<'shared.market-insight', false>;
+    meta_data: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -706,6 +710,7 @@ export interface ApiForOfftakerForOfftaker extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     market_insight: Schema.Attribute.Component<'shared.market-insight', false>;
+    meta_data: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -745,6 +750,7 @@ export interface ApiForProjectDeveloperForProjectDeveloper
     > &
       Schema.Attribute.Private;
     market_insight: Schema.Attribute.Component<'shared.market-insight', false>;
+    meta_data: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -884,6 +890,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;
     market_insight: Schema.Attribute.Component<'shared.market-insight', false>;
+    meta_data: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     testimonials: Schema.Attribute.Component<'shared.testimonial', true>;
     updatedAt: Schema.Attribute.DateTime;
@@ -920,6 +927,7 @@ export interface ApiMarketIntelligencePlatformMarketIntelligencePlatform
       'api::market-intelligence-platform.market-intelligence-platform'
     > &
       Schema.Attribute.Private;
+    meta_data: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -954,6 +962,7 @@ export interface ApiPressPress extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::press.press'> &
       Schema.Attribute.Private;
+    meta_data: Schema.Attribute.Component<'shared.seo', false>;
     news: Schema.Attribute.Component<'shared.market-insight-box', true>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
@@ -1013,6 +1022,7 @@ export interface ApiRatingRating extends Struct.SingleTypeSchema {
       'api::rating.rating'
     > &
       Schema.Attribute.Private;
+    meta_data: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     rating_process: Schema.Attribute.Component<'shared.rating-process', false>;
     updatedAt: Schema.Attribute.DateTime;

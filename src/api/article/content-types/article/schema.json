@@ -66,6 +66,11 @@
         "shared.rich-text",
         "shared.slider"
       ]
+    },
+    "meta_data": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

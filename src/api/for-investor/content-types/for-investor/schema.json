@@ -35,6 +35,11 @@
       "type": "component",
       "component": "shared.expert-section",
       "repeatable": true
+    },
+    "meta_data": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }
