@@ -33,7 +33,7 @@ const getPreviewPathname = (uid, { locale, document }) => {
     
     // Collection Types - Dynamic URLs with slug
     case 'api::article.article':
-      return document?.slug ? `${baseUrl}/blog/${document.slug}` : null;
+      return document?.slug ? `${baseUrl}/insights/${document.slug}` : null;
     
     default:
       return null;
